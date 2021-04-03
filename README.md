@@ -1,4 +1,4 @@
-# sharetech.az
+# share-tech
 
 ## Project setup
 ```

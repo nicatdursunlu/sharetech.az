@@ -1,13 +1,20 @@
 <template>
-  <div class="home">
-    <h1>Home Page</h1>
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+  <Row />
+  <Divider />
 </template>
 
 <script>
+import Row from "../components/Row";
+import Divider from "../components/Divider";
+
 export default {
   name: "Home",
-  components: {},
+  components: {
+    Row,
+    Divider,
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+</style>
