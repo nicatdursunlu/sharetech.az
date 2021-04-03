@@ -1,17 +1,18 @@
 <template>
-  <Row />
-  <Divider />
+  <HeaderNews />
+  <div class="divider" />
+  <MainNews />
 </template>
 
 <script>
-import Row from "../components/Row";
-import Divider from "../components/Divider";
+import HeaderNews from "../components/HeaderNews";
+import MainNews from "../components/MainNews";
 
 export default {
   name: "Home",
   components: {
-    Row,
-    Divider,
+    HeaderNews,
+    MainNews,
   },
 };
 </script>

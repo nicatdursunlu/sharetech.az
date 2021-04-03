@@ -1,26 +1,23 @@
 <template>
-  <div class="header">
+  <div class="header container">
     <div class="flex">
       <img src="../assets/images/logo.png" alt="logo" />
       <i class="fas fa-search icon"></i>
     </div>
   </div>
-  <Divider />
+  <div class="divider" />
 </template>
 
 <script>
-import Divider from "./Divider";
-
 export default {
-  components: {
-    Divider,
-  },
+  components: {},
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  padding: 1.5rem 8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .flex {

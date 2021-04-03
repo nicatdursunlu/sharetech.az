@@ -1,0 +1,29 @@
+@import './variables';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  padding-right: 8rem;
+  padding-left: 8rem;
+}
+
+.divider {
+  height: 0.1rem;
+  width: 100%;
+  background-color: $color-grey-light;
+}
+
