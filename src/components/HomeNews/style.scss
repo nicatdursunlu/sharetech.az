@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables';
+
+.news {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  &:not(:last-child) {
+    margin-right: 5rem;
+  }
+    
+  &__tag {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-orange;
+    margin: 0.7rem 0;
+  }
+
+  &__title {
+    width: 20%;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    margin-bottom: 1rem;
+    display: flex;
+    font-size: 1.3rem;
+  }
+
+  &__icon {
+    color: $color-grey-dark;
+
+    &:not(:last-child){
+      margin-right: 3rem;
+    }
+  }
+}
