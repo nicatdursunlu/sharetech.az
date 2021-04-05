@@ -6,6 +6,10 @@
 
 <script>
 import SingleHeaderNews from "./SingleHeaderNews";
+import image1 from "../../assets/images/1.png";
+import image2 from "../../assets/images/2.png";
+import image3 from "../../assets/images/3.png";
+import image4 from "../../assets/images/4.png";
 
 export default {
   name: "HeaderNews",
@@ -18,25 +22,25 @@ export default {
         id: 1,
         title: "Generate lorem ipsum",
         desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        img: "../../assets/images/1.png",
+        img: image1,
       },
       {
         id: 2,
         title: "Generate lorem ipsum",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        img: "../../assets/images/2.png",
+        desc: "Lore m ipsum dolor sit, amet consectetur adipisicing elit.",
+        img: image2,
       },
       {
         id: 3,
         title: "Generate lorem ipsum",
         desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        img: "../../assets/images/3.png",
+        img: image3,
       },
       {
         id: 4,
         title: "Generate lorem ipsum",
         desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        img: "../../assets/images/4.png",
+        img: image4,
       },
     ],
   }),
