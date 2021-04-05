@@ -1,5 +1,5 @@
 <template>
-  <div class="container news">
+  <div class="container flex">
     <SingleNews v-for="news in allNews" :key="news.id" :news="news" />
   </div>
 </template>
@@ -16,7 +16,8 @@ export default {
       {
         id: 1,
         tag: "Social, Android, Mobile",
-        title: "Duis aute irure dolor in reprehenderi",
+        title:
+          "Duis aute irure dolor in reprehenderi reprehenderireprehenderireprehenderireprehenderi",
         img: "../../assets/images/9.png",
         editTime: "2 deq",
         comments: 15,

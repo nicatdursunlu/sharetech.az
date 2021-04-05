@@ -1,9 +1,10 @@
 <template>
-  <div class="news container row">
-    <div class="col-1-of-2">
+  <div class="news container flex">
+    <div class="single-news">
+      <div class="single-news__gradient"></div>
       <img src="../../assets/images/5.png" alt="" class="news__image" />
       <div class="single-news__info">
-        <h3 class="single-news__title">
+        <h3 class="single-news__title--big">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
         </h3>
         <div class="single-news__desc">
@@ -23,11 +24,12 @@
       </div>
     </div>
 
-    <div class="col-1-of-2">
+    <div class="news__right">
       <div class="single-news">
+        <div class="single-news__gradient"></div>
         <img src="../../assets/images/6.png" alt="" class="news__image" />
         <div class="single-news__info">
-          <h3 class="single-news__title">
+          <h3 class="single-news__title--big">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmo
           </h3>
@@ -48,21 +50,23 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-1-of-2-small">
-          <img src="../../assets/images/7.png" alt="" class="news__image" />
+      <div class="flex">
+        <div class="single-news">
+          <div class="single-news__gradient"></div>
+          <img src="../../assets/images/8.png" alt="" class="news__image" />
           <div class="single-news__info">
-            <h3 class="single-news__title">
+            <h3 class="single-news__title--small">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmo
             </h3>
           </div>
         </div>
 
-        <div class="col-1-of-2-small">
-          <img src="../../assets/images/8.png" alt="" class="news__image" />
+        <div class="single-news">
+          <div class="single-news__gradient"></div>
+          <img src="../../assets/images/7.png" alt="" class="news__image" />
           <div class="single-news__info">
-            <h3 class="single-news__title">
+            <h3 class="single-news__title--small">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmo
             </h3>

@@ -2,9 +2,7 @@
   <div class="container">
     <div class="advertising">
       <h2 class="advertising__title">Reklam ucun</h2>
-      <p class="advertising__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing edit
-      </p>
+      <h2 class="advertising__title">1140x250 px</h2>
     </div>
   </div>
 </template>

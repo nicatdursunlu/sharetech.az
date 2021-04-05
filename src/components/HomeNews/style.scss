@@ -1,15 +1,9 @@
 @import '../../assets/styles/variables';
 
-.news {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .news-card {
-  &:not(:last-child) {
-    margin-right: 5rem;
-  }
-    
+  margin-right: 2.2rem;
+  margin-bottom: 5rem;
+  
   &__tag {
     font-size: 1.5rem;
     font-weight: 600;
@@ -18,7 +12,6 @@
   }
 
   &__title {
-    width: 50%;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
