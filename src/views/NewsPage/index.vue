@@ -2,6 +2,8 @@
   <HeaderNews />
   <div class="divider" />
   <NewsDetails :news="news" />
+  <div class="divider" />
+  <h2>Hello</h2>
 </template>
 
 <script>
