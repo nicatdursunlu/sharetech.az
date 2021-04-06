@@ -1,6 +1,6 @@
 <template>
-  <div class="news-card">
-    <img src="../../assets/images/9.png" alt="" />
+  <div @click="goToSingleNews" class="news-card">
+    <img :src="news.img" alt="" />
     <div class="news-card__desc">
       <p class="news-card__tag">{{ news.tag }}</p>
       <h3 class="news-card__title">{{ news.title }}</h3>
@@ -25,6 +25,14 @@
 <script>
 export default {
   props: ["news"],
+  methods: {
+    goToSingleNews() {
+      this.$router.push({
+        name: "NewsPage",
+        params: this.news,
+      });
+    },
+  },
 };
 </script>
 
