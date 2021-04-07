@@ -1,6 +1,6 @@
 <template>
   <div class="container news flex">
-    <div class="news__left-side single-news--big">
+    <div class="news__left-side single-news single-news--big">
       <div class="single-news__gradient"></div>
       <img src="../../assets/images/5.png" class="single-news__image" />
       <div class="single-news__info">
@@ -25,7 +25,7 @@
     </div>
 
     <div class="news__right-side">
-      <div class="single-news">
+      <div class="single-news single-news--medium">
         <div class="single-news__gradient"></div>
         <img src="../../assets/images/6.png" class="single-news__image" />
         <div class="single-news__info">
@@ -50,8 +50,8 @@
         </div>
       </div>
 
-      <div class="flex">
-        <div class="single-news">
+      <div class="single-news__row">
+        <div class="single-news single-news--small">
           <div class="single-news__gradient"></div>
           <img src="../../assets/images/8.png" class="single-news__image" />
           <div class="single-news__info">
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="single-news">
+        <div class="single-news single-news--small">
           <div class="single-news__gradient"></div>
           <img src="../../assets/images/7.png" class="single-news__image" />
           <div class="single-news__info">
