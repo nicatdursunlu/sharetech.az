@@ -30,8 +30,7 @@
         <img src="../../assets/images/6.png" class="single-news__image" />
         <div class="single-news__info">
           <h3 class="single-news__title--big">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmo
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </h3>
           <div class="single-news__desc">
             <div class="single-news__icon">
@@ -56,8 +55,7 @@
           <img src="../../assets/images/8.png" class="single-news__image" />
           <div class="single-news__info">
             <h3 class="single-news__title--small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmo
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h3>
           </div>
         </div>
@@ -67,8 +65,7 @@
           <img src="../../assets/images/7.png" class="single-news__image" />
           <div class="single-news__info">
             <h3 class="single-news__title--small">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmo
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h3>
           </div>
         </div>

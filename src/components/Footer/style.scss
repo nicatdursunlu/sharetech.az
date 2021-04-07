@@ -1,7 +1,6 @@
 @import "../../assets/styles/variables";
 
 .footer {
-
   &__container {
     margin: 2rem 0;
     display: flex;
@@ -15,14 +14,14 @@
     color: $color-grey-dark;
 
     span {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
 
     &--bold-text {
       font-weight: 700;
       text-decoration: none;
       color: $color-grey-dark;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -35,6 +34,42 @@
 
     &:hover {
       color: $color-blue-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .footer {
+    &__container {
+      margin: 1.5rem 0;
+    }
+
+    &__content {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    &__social-media {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    &__container {
+      margin: 1rem 0;
+    }
+
+    &__content {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    &__icon {
+      font-size: 1.8rem;
     }
   }
 }
