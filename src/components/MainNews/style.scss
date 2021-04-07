@@ -1,26 +1,32 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
 
 .news {
   margin-top: 4rem;
   align-items: center;
   justify-content: space-between;
 
-  &__right {
+  &__left-side {
+  }
 
-    > .single-news {
-      margin-bottom: 2rem;
-    }
+  &__right-side {
+    // > .single-news {
+    //   margin-bottom: 2rem;
+    // }
 
-    .flex {
-      justify-content: space-between;
-    }
+    // .flex {
+    //   justify-content: space-between;
+    // }
   }
 }
 
 .single-news {
-  position: relative;
-  cursor: pointer;
   
+  &--big {
+    width: calc((100% - 1rem) / 2);
+    position: relative;
+    cursor: pointer;
+  }
+
   &__gradient {
     background-image: linear-gradient(to top, $color-black, transparent);
     border-radius: 10px;
@@ -31,7 +37,7 @@
   }
 
   &__image {
-    
+    width: 100%;
   }
 
   &__info {

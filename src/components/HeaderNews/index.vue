@@ -1,5 +1,5 @@
 <template>
-  <div class="row container">
+  <div class="row flex container">
     <SingleHeaderNews :news="news" v-for="news in allNews" :key="news.id" />
   </div>
 </template>
@@ -48,4 +48,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./style.scss";
 </style>

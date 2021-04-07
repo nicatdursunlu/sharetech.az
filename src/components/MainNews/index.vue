@@ -1,8 +1,8 @@
 <template>
-  <div class="news container flex">
-    <div class="single-news">
+  <div class="container news flex">
+    <div class="news__left-side single-news--big">
       <div class="single-news__gradient"></div>
-      <img src="../../assets/images/5.png" alt="" class="news__image" />
+      <img src="../../assets/images/5.png" class="single-news__image" />
       <div class="single-news__info">
         <h3 class="single-news__title--big">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
@@ -24,10 +24,10 @@
       </div>
     </div>
 
-    <div class="news__right">
+    <div class="news__right-side">
       <div class="single-news">
         <div class="single-news__gradient"></div>
-        <img src="../../assets/images/6.png" alt="" class="news__image" />
+        <img src="../../assets/images/6.png" class="single-news__image" />
         <div class="single-news__info">
           <h3 class="single-news__title--big">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -53,7 +53,7 @@
       <div class="flex">
         <div class="single-news">
           <div class="single-news__gradient"></div>
-          <img src="../../assets/images/8.png" alt="" class="news__image" />
+          <img src="../../assets/images/8.png" class="single-news__image" />
           <div class="single-news__info">
             <h3 class="single-news__title--small">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -64,7 +64,7 @@
 
         <div class="single-news">
           <div class="single-news__gradient"></div>
-          <img src="../../assets/images/7.png" alt="" class="news__image" />
+          <img src="../../assets/images/7.png" class="single-news__image" />
           <div class="single-news__info">
             <h3 class="single-news__title--small">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

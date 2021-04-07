@@ -1,5 +1,5 @@
 <template>
-  <div class="col-1-of-4 content">
+  <div class="content">
     <img :src="news.img" :alt="news.title" class="image" />
     <div class="details">
       <h4 class="title">{{ news.title }}</h4>

@@ -1,8 +1,14 @@
 @import "../../assets/styles/variables";
 
+.row {
+  margin: 2rem auto;
+  justify-content: space-between;
+}
+
 .content {
   display: flex;
   align-items: center;
+  width: calc((100% - 8rem) / 4);
 }
 
 .image {
@@ -17,4 +23,17 @@
 .desc {
   font-size: 1.2rem;
   color: $color-grey-dark;
+}
+
+@media screen and (max-width: 1140px) {
+  .content {
+    width: calc((100% - 10rem) / 2);
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    width: 100%;
+  }
 }
