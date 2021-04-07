@@ -1,7 +1,11 @@
 <template>
   <div class="container">
     <div class="news-details">
-      <img :src="news.img" :alt="news.title" class="news-details__img" />
+      <img
+        src="../../assets/images/19.svg"
+        :alt="news.title"
+        class="news-details__img"
+      />
       <div class="news-details__content">
         <div class="news-details__social-media">
           <a href="#">

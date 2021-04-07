@@ -1,9 +1,20 @@
 @import '../../assets/styles/variables';
 
+.flex {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .news-card {
-  margin-right: 3.6rem;
   margin-bottom: 5rem;
   cursor: pointer;
+  width: calc((100% - 10rem) / 3);
+
+  height: 37.6rem;
+
+  &__img {
+    width: 100%;
+  }
   
   &__tag {
     font-size: 1.5rem;
@@ -15,10 +26,9 @@
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-
-    // background-color: red;
-    width: 70%;
+    margin-bottom: 1rem; 
+    line-height: 2.8rem;   
+    padding-right: 1.5rem;
   }
 
   &__info {

@@ -21,7 +21,7 @@ export default {
       {
         id: 1,
         tag: "Social, Android, Mobile",
-        title: "Duis aute irure dolor in reprehenderi reprehenderi",
+        title: "Duis aute irure dolor in reprehenderi",
         img: image9,
         editTime: "2 deq",
         comments: 15,

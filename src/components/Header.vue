@@ -2,7 +2,9 @@
   <div class="header container">
     <div class="flex">
       <img src="../assets/images/logo.png" alt="logo" />
-      <i class="fas fa-search icon"></i>
+      <a href="#" class="header__search">
+        <i class="fas fa-search icon"></i>
+      </a>
     </div>
   </div>
   <div class="divider" />
@@ -21,7 +23,6 @@ export default {
 }
 
 .flex {
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }

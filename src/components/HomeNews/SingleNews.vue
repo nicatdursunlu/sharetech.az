@@ -1,6 +1,6 @@
 <template>
   <div @click="goToSingleNews" class="news-card">
-    <img :src="news.img" alt="" />
+    <img :src="news.img" :alt="news.title" class="news-card__img" />
     <div class="news-card__desc">
       <p class="news-card__tag">{{ news.tag }}</p>
       <h3 class="news-card__title">{{ news.title }}</h3>

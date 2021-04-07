@@ -3,17 +3,23 @@
   <div class="divider" />
   <NewsDetails :news="news" />
   <div class="divider" />
-  <h2>Hello</h2>
+  <div class="news">
+    <h3 class="news__title"></h3>
+    <h3 class="news__title">Oxşar xəbərlər</h3>
+    <HomeNews />
+  </div>
 </template>
 
 <script>
 import HeaderNews from "../../components/HeaderNews";
+import HomeNews from "../../components/HomeNews";
 import NewsDetails from "./NewsDetails";
 
 export default {
   components: {
     HeaderNews,
     NewsDetails,
+    HomeNews,
   },
   computed: {
     news() {
@@ -24,4 +30,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./style.scss";
 </style>
