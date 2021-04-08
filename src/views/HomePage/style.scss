@@ -6,6 +6,7 @@
   justify-content: center;
 
   &__button {
+    text-decoration: none;
     font-weight: 600;
     font-size: 1.5rem;
     color: $color-grey-dark;
@@ -15,5 +16,10 @@
     border-radius: 3px;
     outline: none;
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+      color: crimson;
+    }
   }
 }

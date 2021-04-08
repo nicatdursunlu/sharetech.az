@@ -9,6 +9,17 @@
   margin-bottom: 5rem;
   cursor: pointer;
   width: calc((100% - 10rem) / 3);
+  text-decoration: none !important;
+  border-radius: 5px;
+  padding: 1rem;
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+  }
+
+  &:hover &__title {
+    color: crimson;
+  }
 
   &__img {
     width: 100%;
@@ -16,12 +27,13 @@
 
   &__tag {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     color: $color-orange;
     margin: 0.7rem 0;
   }
 
   &__title {
+    color: $color-black;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;

@@ -1,5 +1,5 @@
 <template>
-  <div @click="goToSingleNews" class="news-card">
+  <router-link :to="{ name: 'NewsPage', params: news }" class="news-card">
     <img :src="news.img" :alt="news.title" class="news-card__img" />
     <div class="news-card__desc">
       <p class="news-card__tag">{{ news.tag }}</p>
@@ -19,20 +19,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
 export default {
   props: ["news"],
-  methods: {
-    goToSingleNews() {
-      this.$router.push({
-        name: "NewsPage",
-        params: this.news,
-      });
-    },
-  },
 };
 </script>
 

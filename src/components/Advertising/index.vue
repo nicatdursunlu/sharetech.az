@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div class="advertising">
+    <router-link to="#" class="advertising">
       <h2 class="advertising__title">Reklam ucun</h2>
       <h2 class="advertising__title">1140x250 px</h2>
-    </div>
+    </router-link>
   </div>
 </template>
 

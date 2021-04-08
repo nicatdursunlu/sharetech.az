@@ -14,7 +14,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // align-content: space-between;
   }
 
   @media screen and (max-width: 1140px) {
@@ -42,6 +41,11 @@
 .single-news {
   position: relative;
   cursor: pointer;
+  border-radius: 1rem;
+
+  &:hover {
+    box-shadow: 0 0.8rem 1.2rem $color-black;
+  }
 
   &--big {
   }

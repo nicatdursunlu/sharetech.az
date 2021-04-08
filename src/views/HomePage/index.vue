@@ -5,7 +5,7 @@
   <Advertising />
   <HomeNews />
   <div class="btn-box">
-    <button class="btn-box__button">Diger xeberler</button>
+    <router-link to="#" class="btn-box__button">Diger xeberler</router-link>
   </div>
 </template>
 

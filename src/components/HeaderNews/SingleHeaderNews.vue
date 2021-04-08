@@ -1,11 +1,11 @@
 <template>
-  <div class="content">
+  <router-link to="#" class="content">
     <img :src="news.img" :alt="news.title" class="image" />
     <div class="details">
       <h4 class="title">{{ news.title }}</h4>
       <p class="desc">{{ news.desc }}</p>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>

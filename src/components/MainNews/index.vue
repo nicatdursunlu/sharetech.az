@@ -1,6 +1,6 @@
 <template>
   <div class="container news flex">
-    <div class="news__left-side single-news single-news--big">
+    <router-link to="#" class="news__left-side single-news single-news--big">
       <div class="single-news__gradient"></div>
       <img src="../../assets/images/5.png" class="single-news__image" />
       <div class="single-news__info">
@@ -22,10 +22,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </router-link>
 
     <div class="news__right-side">
-      <div class="single-news single-news--medium">
+      <router-link to="#" class="single-news single-news--medium">
         <div class="single-news__gradient"></div>
         <img src="../../assets/images/6.png" class="single-news__image" />
         <div class="single-news__info">
@@ -47,10 +47,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </router-link>
 
       <div class="single-news__row">
-        <div class="single-news single-news--small">
+        <router-link to="#" class="single-news single-news--small">
           <div class="single-news__gradient"></div>
           <img src="../../assets/images/8.png" class="single-news__image" />
           <div class="single-news__info">
@@ -58,9 +58,9 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h3>
           </div>
-        </div>
+        </router-link>
 
-        <div class="single-news single-news--small">
+        <router-link to="#" class="single-news single-news--small">
           <div class="single-news__gradient"></div>
           <img src="../../assets/images/7.png" class="single-news__image" />
           <div class="single-news__info">
@@ -68,7 +68,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h3>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
