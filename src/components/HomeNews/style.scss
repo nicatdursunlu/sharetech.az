@@ -48,6 +48,17 @@
   .news-card {
     margin-bottom: 3rem;
     width: calc((100% - 5rem) / 2);
+
+    &__title {
+      font-size: 1.7rem;
+      padding-right: 1rem;
+    }
+
+    &__icon {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
   }
 }
 
