@@ -1,4 +1,5 @@
 @import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
 
 .news {
   &__title {
@@ -106,7 +107,7 @@
   }
 }
 
-@media screen and (max-width: 1140px) {
+@include responsive($breakpoint-tablet) {
   .news-details {
     padding: 0;
 
@@ -129,7 +130,7 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@include responsive($breakpoint-mobile) {
   .news-details {
     &__content {
       flex-direction: column;

@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/styles/variables";
+@import "../assets/styles/mixins";
+
 .header {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -34,7 +37,7 @@ export default {
   color: #6d6e70;
 }
 
-@media screen and (max-width: 550px) {
+@include responsive($breakpoint-mobile) {
   .header {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -46,7 +49,6 @@ export default {
 
   .icon {
     font-size: 1.4rem;
-    color: #6d6e70;
   }
 }
 </style>

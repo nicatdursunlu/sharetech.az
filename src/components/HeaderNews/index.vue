@@ -1,5 +1,5 @@
 <template>
-  <div class="row flex container">
+  <div class="row container">
     <SingleHeaderNews :news="news" v-for="news in allNews" :key="news.id" />
   </div>
 </template>

@@ -1,0 +1,15 @@
+@import "./variables";
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == $breakpoint-tablet {
+    @media screen and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == $breakpoint-mobile {
+    @media screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+}

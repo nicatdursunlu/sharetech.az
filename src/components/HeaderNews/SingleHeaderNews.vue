@@ -1,5 +1,5 @@
 <template>
-  <router-link to="#" class="content">
+  <router-link to="#" class="content col-4">
     <img :src="news.img" :alt="news.title" class="image" />
     <div class="details">
       <h4 class="title">{{ news.title }}</h4>

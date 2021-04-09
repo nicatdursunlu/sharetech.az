@@ -1,4 +1,5 @@
 @import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
 
 .flex {
   flex-wrap: wrap;
@@ -8,7 +9,6 @@
 .news-card {
   margin-bottom: 5rem;
   cursor: pointer;
-  width: calc((100% - 10rem) / 3);
   text-decoration: none !important;
   border-radius: 5px;
   padding: 1rem;
@@ -56,10 +56,9 @@
   }
 }
 
-@media screen and (max-width: 1140px) {
+@include responsive($breakpoint-tablet) {
   .news-card {
     margin-bottom: 3rem;
-    width: calc((100% - 5rem) / 2);
 
     &__title {
       font-size: 1.7rem;
@@ -74,10 +73,8 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@include responsive($breakpoint-mobile) {
   .news-card {
-    width: 100%;
-
     &__title {
       font-size: 1.8rem;
     }
