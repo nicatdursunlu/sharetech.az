@@ -1,42 +1,12 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/mixins";
 
+.align-self {
+  align-self: stretch;
+}
+
 .news {
   margin-top: 4rem;
-  align-items: center;
-  justify-content: space-between;
-
-  &__left-side {
-    width: calc((100% - 3rem) / 2);
-  }
-
-  &__right-side {
-    width: calc((100% - 3rem) / 2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  @include responsive($breakpoint-tablet) {
-    &__left-side {
-      width: calc((100% - 2rem) / 2);
-    }
-
-    &__right-side {
-      width: calc((100% - 2rem) / 2);
-    }
-  }
-
-  @include responsive($breakpoint-mobile) {
-    &__left-side {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-    &__right-side {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  }
 }
 
 .single-news {
@@ -44,20 +14,9 @@
   cursor: pointer;
   border-radius: 1rem;
 
-  &:hover {
-    box-shadow: 0 0.8rem 1.2rem $color-black;
-  }
-
-  &--big {
-  }
-
-  &--medium {
-    margin-bottom: 2.5rem;
-  }
-
-  &--small {
-    width: calc((100% - 3rem) / 2);
-  }
+  // &:hover {
+  //   box-shadow: 0 0.8rem 1.2rem $color-black;
+  // }
 
   &__row {
     display: flex;
@@ -71,6 +30,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    z-index: 1;
   }
 
   &__image {
@@ -81,6 +41,7 @@
     padding: 1.5rem 3rem;
     position: absolute;
     bottom: 1.5rem;
+    z-index: 2;
   }
 
   &__title {
@@ -140,6 +101,15 @@
       padding: 1.5rem 3rem;
       position: absolute;
       bottom: 1rem;
+    }
+
+    &__title {
+      &--big {
+        font-size: 2.3rem;
+      }
+      &--small {
+        font-size: 2.3rem;
+      }
     }
 
     &__desc {

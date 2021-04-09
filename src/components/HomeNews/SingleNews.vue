@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ name: 'NewsPage', params: news }" class="news-card col-3">
+  <router-link :to="{ name: 'NewsPage', params: news }" class="news-card col-4">
     <img :src="news.img" :alt="news.title" class="news-card__img" />
     <div class="news-card__desc">
       <p class="news-card__tag">{{ news.tag }}</p>

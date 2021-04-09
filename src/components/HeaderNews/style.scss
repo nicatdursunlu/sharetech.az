@@ -11,10 +11,6 @@
   text-decoration: none;
   border-radius: 5px;
 
-  &:hover {
-    box-shadow: 0 0.2rem 0.6rem $color-grey-dark;
-  }
-
   &:hover .title {
     color: crimson;
   }
