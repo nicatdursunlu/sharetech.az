@@ -19,8 +19,8 @@ body {
 }
 
 .container {
-  padding-right: 13rem;
-  padding-left: 13rem;
+  width: $container;
+  margin: 0 auto;
 }
 
 .divider {
@@ -31,7 +31,6 @@ body {
 
 .flex {
   display: flex;
-  // align-items: flex-start;
   align-items: stretch;
   justify-content: space-between;
 }
@@ -71,11 +70,14 @@ body {
 // Meadia queries
 @include responsive($breakpoint-tablet) {
   .container {
-    padding-right: 8rem;
-    padding-left: 8rem;
+    width: $container-tablet;
   }
 
   .col-3 {
+    width: calc(50%);
+  }
+
+  .col-4 {
     width: calc(50%);
   }
 
@@ -90,8 +92,7 @@ body {
 
 @include responsive($breakpoint-mobile) {
   .container {
-    padding-right: 4rem;
-    padding-left: 4rem;
+    width: $container-mobile;
   }
 
   .col-3 {

@@ -30,6 +30,8 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1;
   }
 
@@ -41,7 +43,7 @@
     padding: 1.5rem 3rem;
     position: absolute;
     bottom: 1.5rem;
-    z-index: 2;
+    z-index: 100;
   }
 
   &__title {
@@ -104,17 +106,12 @@
     }
 
     &__title {
-      &--big {
-        font-size: 2.3rem;
-      }
       &--small {
-        font-size: 2.3rem;
+        font-size: 1.5rem;
       }
     }
 
     &__desc {
-      margin-top: 2rem;
-      font-size: 1.1rem;
     }
   }
 }

@@ -1,25 +1,27 @@
 @import "../../assets/styles/variables";
 
-.btn-box {
-  margin: 5rem 0;
-  display: flex;
-  justify-content: center;
+.home {
+  &__btn-box {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
 
-  &__button {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: $color-grey-dark;
-    padding: 1.5rem 2.5rem;
-    background-color: $color-white;
-    border: 1px solid $color-grey-light;
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
+    &-button {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: $color-grey-dark;
+      padding: 1.5rem 2.5rem;
+      background-color: $color-white;
+      border: 1px solid $color-grey-light;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
 
-    &:hover {
-      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
-      color: crimson;
+      &:hover {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+        color: crimson;
+      }
     }
   }
 }
