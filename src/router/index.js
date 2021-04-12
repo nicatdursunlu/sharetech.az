@@ -4,7 +4,7 @@ import NewsPage from '../views/NewsPage';
 
 const routes = [
   {
-    path: '/',
+    path: '/news',
     name: 'Home',
     component: HomePage,
   },

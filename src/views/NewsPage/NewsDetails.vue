@@ -2,8 +2,8 @@
   <div class="container">
     <div class="news-details">
       <img
-        src="../../assets/images/19.svg"
-        :alt="news.title"
+        :src="news.image_thumbnail_path"
+        :alt="news.name"
         class="news-details__img"
       />
       <div class="news-details__content">
@@ -26,21 +26,21 @@
         </div>
 
         <div class="news-details__info">
-          <p class="news-details__tag">{{ news.tag }}</p>
+          <p class="news-details__tag">{{ news.status }}</p>
           <h3 class="news-details__title">{{ news.title }}</h3>
           <div class="flex row">
-            <div class="news-details__icon">
+            <!-- <div class="news-details__icon">
               <i class="fas fa-user-edit"></i>
               &nbsp;{{ news.editTime }} evvel
-            </div>
+            </div> -->
             <div class="news-details__icon">
               <i class="fas fa-clock"></i>
-              &nbsp; Oxunma vaxti {{ news.clock }}
+              &nbsp; Oxunma vaxti {{ news.start_date }}
             </div>
-            <div class="news-details__icon">
+            <!-- <div class="news-details__icon">
               <i class="fas fa-comment-alt"></i>
               &nbsp; {{ news.comments }} serh
-            </div>
+            </div> -->
           </div>
           <p class="news-details__desc">
             Proin id ultricies justo, fringilla pharetra enim. Phasellus
@@ -71,6 +71,15 @@
             Heading 6 - 14px
           </h6>
           <p class="news-details__desc">{{ news.desc }}</p>
+          <p class="news-details__desc">
+            Proin id ultricies justo, fringilla pharetra enim. Phasellus
+            vehicula pretium malesuada. Proin dolor enim, suscipit vitae luctus
+            non, maximus malesuada odio. Phasellus condimentum tellus eget quam
+            egestas, a lobortis mauris venenatis. Vestibulum id leo quis felis
+            suscipit pulvinar. Duis aliquam mi urna, eu bibendum ante convallis
+            eu. Praesent sit amet enim purus. Sed egestas pretium purus id
+            consectetur.
+          </p>
         </div>
       </div>
     </div>
