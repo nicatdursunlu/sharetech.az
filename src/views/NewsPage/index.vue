@@ -3,10 +3,12 @@
   <div class="divider" />
   <NewsDetails :news="news" />
   <div class="divider" />
-  <div class="news">
-    <h3 class="news__title"></h3>
-    <h3 class="news__title">Oxşar xəbərlər</h3>
-    <HomeNews />
+  <div class="container">
+    <div class="news">
+      <h3 class="news__title"></h3>
+      <h3 class="news__title">Oxşar xəbərlər</h3>
+      <HomeNews />
+    </div>
   </div>
 </template>
 

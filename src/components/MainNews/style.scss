@@ -14,10 +14,6 @@
   cursor: pointer;
   border-radius: 1rem;
 
-  // &:hover {
-  //   box-shadow: 0 0.8rem 1.2rem $color-black;
-  // }
-
   &__row {
     display: flex;
     justify-content: space-between;
@@ -109,9 +105,6 @@
       &--small {
         font-size: 1.5rem;
       }
-    }
-
-    &__desc {
     }
   }
 }
