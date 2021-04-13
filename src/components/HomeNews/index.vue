@@ -1,8 +1,19 @@
 <template>
-  <div class="row">
-    <SingleNews v-for="news in allNews.tv_shows" :key="news.id" :news="news" />
+  <div class="news">
+    <div class="row" v-if="visibleNews.length">
+      <SingleNews
+        v-for="news in allNews.slice(1, visible)"
+        :key="news.id"
+        :news="news"
+      />
+    </div>
+    <h1 v-else class="news__loading">Loading...</h1>
+    <div v-if="visible < allNews.length" class="news__btn-box">
+      <button @click="loadMoreBtn" to="#" class="news__btn-box-button">
+        Diger xeberler
+      </button>
+    </div>
   </div>
-  <button @click="loadMoreBtn">Load more</button>
 </template>
 
 <script>
@@ -14,43 +25,24 @@ export default {
   },
   mounted() {
     this.fetchNews();
-    // this.loadMoreBtn();
-    console.log("allNews.tv_shows ", this.allNews);
   },
   methods: {
-    fetchNews() {
-      this.axios
-        .get("https://www.episodate.com/api/most-popular?page=3")
-        .then((response) => {
-          this.allNews = response.data;
-        })
-        .catch((error) => {
-          console.log("fetch eror: ", error);
-        });
+    async fetchNews() {
+      const response = await fetch(
+        `https://www.episodate.com/api/most-popular`
+      );
+      const json = await response.json();
+      this.allNews = json.tv_shows;
+      this.visibleNews = this.allNews;
     },
-    // loadMoreBtn() {
-    //   if (!this.moreNewsFetched) {
-    //     this.axios
-    //       .get("https://www.episodate.com/api/most-popular?page=3")
-    //       .then((response) => {
-    //         this.moreNews = response.data;
-    //         this.allNews = this.moreNews.splice(0, 5);
-    //         this.moreNewsFetched = true;
-    //       });
-    //   }
-    //   const nextNews = this.moreNews.splice(0, 5);
-    //   this.moreNews.push(nextNews);
-    // },
+    loadMoreBtn() {
+      this.visible = this.visible + 5;
+    },
   },
   data: () => ({
-    allNews: [
-      {
-        tv_shows: [],
-      },
-    ],
-    moreNews: [],
-    moreNewsFetched: false,
-    totalNews: 0,
+    visible: 6,
+    allNews: [],
+    visibleNews: [],
   }),
 };
 </script>

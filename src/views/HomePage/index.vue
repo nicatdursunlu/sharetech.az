@@ -5,10 +5,7 @@
     <div class="container">
       <MainNews />
       <Advertising />
-      <HomeNews />
-    </div>
-    <div class="home__btn-box">
-      <router-link to="#" class="home__btn-box-button">Diger xeberler</router-link>
+      <HomeNews :visible="visible" />
     </div>
   </div>
 </template>
