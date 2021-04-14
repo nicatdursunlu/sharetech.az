@@ -4,9 +4,9 @@
       <a href="#" class="header__logo">
         <img src="../assets/images/logo.png" alt="logo" class="header__img" />
       </a>
-      <a href="#" class="header__search">
+      <button @click="toggleSearch" class="header__search">
         <i class="fas fa-search icon"></i>
-      </a>
+      </button>
     </div>
   </div>
   <div class="divider" />
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  components: {},
+  props: ["toggleSearch"],
 };
 </script>
 
@@ -25,6 +25,12 @@ export default {
 .header {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+
+  &__search {
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .flex {

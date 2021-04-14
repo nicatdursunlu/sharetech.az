@@ -10,7 +10,7 @@
             class="news-card__img"
           />
         </div>
-        <Advertising />
+        <!-- <Advertising /> -->
       </router-link>
       <div class="news-card__desc">
         <router-link
