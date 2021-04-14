@@ -20,7 +20,8 @@
 
   &__img {
     margin-bottom: 4rem;
-    width: 35rem;
+    object-fit: cover;
+    // width: 35rem;
   }
 
   &__content {

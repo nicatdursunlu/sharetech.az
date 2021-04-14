@@ -39,7 +39,6 @@
 
 .news-card {
   margin-bottom: 5rem;
-  // cursor: pointer;
   border-radius: 5px;
   padding: 1rem;
 
@@ -60,8 +59,15 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: $color-orange;
-    margin: 0.7rem 0;
+    margin: 1rem 0;
     text-decoration: none;
+  }
+
+  &__author {
+    color: indigo;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
   }
 
   &__title {
