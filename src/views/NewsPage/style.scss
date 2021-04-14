@@ -20,6 +20,7 @@
 
   &__img {
     margin-bottom: 4rem;
+    width: 35rem;
   }
 
   &__content {
@@ -132,6 +133,8 @@
 
 @include responsive($breakpoint-mobile) {
   .news-details {
+    padding: 2rem;
+
     &__content {
       flex-direction: column;
     }

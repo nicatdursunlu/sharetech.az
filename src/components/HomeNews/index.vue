@@ -36,7 +36,7 @@ export default {
       this.visibleNews = this.allNews;
     },
     loadMoreBtn() {
-      this.visible = this.visible + 5;
+      this.visible = this.visible + 7;
     },
   },
   data: () => ({

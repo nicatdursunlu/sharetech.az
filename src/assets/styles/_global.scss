@@ -23,6 +23,10 @@ body {
   margin: 0 auto;
 }
 
+.text-decoration {
+  text-decoration: none;
+}
+
 .divider {
   height: 0.1rem;
   width: 100%;
@@ -97,6 +101,10 @@ body {
 
   .col-3 {
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
   }
 
   .col-4 {

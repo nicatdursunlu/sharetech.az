@@ -1,14 +1,26 @@
 <template>
-  <router-link :to="{ name: 'NewsPage', params: news }" class="col-4">
+  <div class="col-4">
     <div class="news-card">
-      <img
-        :src="news.image_thumbnail_path"
-        :alt="news.name"
-        class="news-card__img"
-      />
+      <router-link :to="{ name: 'NewsPage', params: news }">
+        <img
+          :src="news.image_thumbnail_path"
+          :alt="news.name"
+          class="news-card__img"
+        />
+      </router-link>
       <div class="news-card__desc">
-        <p class="news-card__tag">{{ news.status }}</p>
-        <h3 class="news-card__title">{{ news.name }}</h3>
+        <router-link
+          :to="{ name: 'NewsPage', params: news }"
+          class="text-decoration"
+        >
+          <p class="news-card__tag">{{ news.status }}</p>
+        </router-link>
+        <router-link
+          :to="{ name: 'NewsPage', params: news }"
+          class="text-decoration"
+        >
+          <h3 class="news-card__title">{{ news.name }}</h3>
+        </router-link>
         <div class="news-card__info">
           <!-- <div class="news-card__icon">
             <i class="fas fa-user-edit"></i>
@@ -25,7 +37,7 @@
         </div>
       </div>
     </div>
-  </router-link>
+  </div>
 </template>
 
 <script>

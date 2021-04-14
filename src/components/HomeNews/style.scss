@@ -37,13 +37,9 @@
   justify-content: space-between;
 }
 
-.col-4 {
-  text-decoration: none !important;
-}
-
 .news-card {
   margin-bottom: 5rem;
-  cursor: pointer;
+  // cursor: pointer;
   border-radius: 5px;
   padding: 1rem;
 
@@ -65,6 +61,7 @@
     font-weight: 700;
     color: $color-orange;
     margin: 0.7rem 0;
+    text-decoration: none;
   }
 
   &__title {
