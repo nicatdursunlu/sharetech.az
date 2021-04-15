@@ -3,8 +3,10 @@
     <div class="search-bar">
       <input
         type="text"
+        v-model="query"
         class="search-bar__input"
         placeholder="Axtarmaq istədiyiniz sözü daxil edin ..."
+        @keypress="emitToParent"
       />
       <button @click="toggleSearch" class="search-bar__button">
         <i class="fas fa-times"></i>
@@ -17,6 +19,14 @@
 <script>
 export default {
   props: ["toggleSearch"],
+  data: () => ({
+    query: "",
+  }),
+  methods: {
+    emitToParent() {
+      this.$emit("query", this.query);
+    },
+  },
 };
 </script>
 
@@ -32,7 +42,7 @@ export default {
 
   &__input {
     height: 4rem;
-    width: 50%;
+    width: 70%;
     padding: 2rem;
     border: none;
     border-left: 1px solid $color-grey-dark;

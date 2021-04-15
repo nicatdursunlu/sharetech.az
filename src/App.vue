@@ -1,7 +1,7 @@
 <template>
   <Header v-if="!searchState" :toggleSearch="toggleSearch" />
-  <SearchBar v-else :toggleSearch="toggleSearch" />
-  <router-view />
+  <SearchBar @query="getQuery" v-else :toggleSearch="toggleSearch" />
+  <router-view :query="query" :searchState="searchState" :team="team" />
   <Footer />
 </template>
 
@@ -18,11 +18,15 @@ export default {
   },
   data: () => ({
     searchState: false,
+    query: "",
+    team: "Ninja",
   }),
   methods: {
     toggleSearch() {
       this.searchState = !this.searchState;
-      console.log("searchState", this.searchState);
+    },
+    getQuery(value) {
+      this.query = value;
     },
   },
 };

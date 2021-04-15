@@ -30,6 +30,7 @@ export default {
     border: none;
     outline: none;
     cursor: pointer;
+    background-color: $color-white;
   }
 }
 
