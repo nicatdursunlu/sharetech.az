@@ -7,6 +7,7 @@
         class="search-bar__input"
         placeholder="Axtarmaq istədiyiniz sözü daxil edin ..."
         @keypress="emitToParent"
+        @keyup.enter="toggleSearch"
       />
       <button @click="toggleSearch" class="search-bar__button">
         <i class="fas fa-times"></i>

@@ -79,6 +79,11 @@ body {
 
   .col-3 {
     width: calc(50%);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 2rem;
+    }
   }
 
   .col-4 {
