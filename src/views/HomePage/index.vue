@@ -2,14 +2,12 @@
   <div class="home">
     <HeaderNews />
     <div class="divider" />
-    <div v-if="!searchState" class="container">
-      <MainNews />
-      <Advertising />
-      <HomeNews :visible="visible" :query="query" />
-    </div>
-    <div v-else class="container">
-      <h1><span>Share tech</span>ile bagli neticeler</h1>
-      <HomeNews :visible="visible" :query="query" />
+    <div class="container">
+      <div v-if="!searchState">
+        <MainNews />
+        <Advertising />
+      </div>
+      <HomeNews :visible="visible" :query="query" :searchState="searchState" />
     </div>
   </div>
 </template>

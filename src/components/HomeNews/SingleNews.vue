@@ -82,14 +82,10 @@
 </template>
 
 <script>
-import { Advertising } from "../Advertising";
 import { format } from "date-fns";
 
 export default {
   props: ["news"],
-  components: {
-    Advertising,
-  },
   computed: {
     time() {
       return format(new Date(this.news.publishedAt), "dd.MM.yyyy");

@@ -3,10 +3,10 @@
     <div class="search-bar">
       <input
         type="text"
-        v-model="query"
+        v-model.trim="query"
         class="search-bar__input"
         placeholder="Axtarmaq istədiyiniz sözü daxil edin ..."
-        @keypress="emitToParent"
+        @keyup="emitToParent"
         @keyup.enter="toggleSearch"
       />
       <button @click="toggleSearch" class="search-bar__button">
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import fetchNews from "../API/fetchNews";
+
 export default {
   props: ["toggleSearch"],
   data: () => ({
@@ -26,7 +28,31 @@ export default {
   methods: {
     emitToParent() {
       this.$emit("query", this.query);
+      fetchNews(this.query);
+      console.log("emit", this.query);
     },
+    // fetchNews() {
+    //   const apiKey = "fba9f5931dd5400080368938a8ec863f";
+    //   const url =
+    //     "https://newsapi.org/v2/top-headlines?" +
+    //     "country=tr&" +
+    //     `apiKey=${apiKey}` +
+    //     `&q=${this.query}`;
+
+    //   console.log("url", this.query);
+
+    //   fetch(url)
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //       console.log("data", data.articles);
+    //       this.allNews = data.articles;
+    //     })
+    //     .catch((error) => {
+    //       console.log("error", error);
+    //       this.errored = true;
+    //     })
+    //     .finally(() => (this.loading = false));
+    // },
   },
 };
 </script>
