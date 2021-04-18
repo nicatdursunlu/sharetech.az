@@ -15,7 +15,7 @@
           Axtarışınız ilə bağlı heç bir nəticə tapılmadı!
         </h1>
       </div>
-      <h3 class="news__title">Oxşar xəbərlər</h3>
+      <!-- <h3 class="news__title">Oxşar xəbərlər</h3> -->
     </div>
 
     <div class="row" v-if="allNews.length">
@@ -42,7 +42,7 @@ export default {
   components: {
     SingleNews,
   },
-  mounted() {
+  created() {
     this.getNews();
     console.log("searchState", this.searchState);
   },

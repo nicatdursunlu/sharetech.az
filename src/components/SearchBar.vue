@@ -7,7 +7,6 @@
         class="search-bar__input"
         placeholder="Axtarmaq istədiyiniz sözü daxil edin ..."
         @keyup="emitToParent"
-        @keyup.enter="toggleSearch"
       />
       <button @click="toggleSearch" class="search-bar__button">
         <i class="fas fa-times"></i>
@@ -26,33 +25,14 @@ export default {
     query: "",
   }),
   methods: {
+    getNews() {
+      fetchNews(this.query);
+    },
     emitToParent() {
       this.$emit("query", this.query);
       fetchNews(this.query);
       console.log("emit", this.query);
     },
-    // fetchNews() {
-    //   const apiKey = "fba9f5931dd5400080368938a8ec863f";
-    //   const url =
-    //     "https://newsapi.org/v2/top-headlines?" +
-    //     "country=tr&" +
-    //     `apiKey=${apiKey}` +
-    //     `&q=${this.query}`;
-
-    //   console.log("url", this.query);
-
-    //   fetch(url)
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       console.log("data", data.articles);
-    //       this.allNews = data.articles;
-    //     })
-    //     .catch((error) => {
-    //       console.log("error", error);
-    //       this.errored = true;
-    //     })
-    //     .finally(() => (this.loading = false));
-    // },
   },
 };
 </script>
@@ -69,12 +49,13 @@ export default {
 
   &__input {
     height: 4rem;
-    width: 70%;
+    width: 90%;
     padding: 2rem;
     border: none;
     border-left: 1px solid $color-grey-dark;
     outline: none;
     font-size: 1.7rem;
+    cursor: pointer;
 
     &:focus {
       border-left: 1px solid $color-orange;

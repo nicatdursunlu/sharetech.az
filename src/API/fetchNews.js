@@ -7,8 +7,9 @@ export default async function fetchNews(query) {
     `apiKey=${apiKey}` +
     `&q=${query}`;
 
+  console.log("url", url);
 
-  const response = await fetch(url)
-  return response.json()
+  const response = await fetch(url);
+  return response.json();
 }
 
