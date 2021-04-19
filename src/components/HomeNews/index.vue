@@ -5,7 +5,7 @@
       <span class="news__heading-span">“Share tech” </span>ile bagli neticeler
     </h1>
 
-    <div v-else class="news__error-box">
+    <!-- <div v-else class="news__error-box">
       <h1 class="news__exclamation">!</h1>
       <div class="news__error-content">
         <h1 class="news__error-message news__error-message--orange">
@@ -15,13 +15,12 @@
           Axtarışınız ilə bağlı heç bir nəticə tapılmadı!
         </h1>
       </div>
-      <!-- <h3 class="news__title">Oxşar xəbərlər</h3> -->
-    </div>
+    </div> -->
 
     <div class="row" v-if="allNews.length">
       <SingleNews
         v-for="news in allNews.slice(0, visible)"
-        :key="news.source.id"
+        :key="news.title"
         :news="news"
       />
     </div>
@@ -44,7 +43,6 @@ export default {
   },
   created() {
     this.getNews();
-    console.log("searchState", this.searchState);
   },
   methods: {
     async getNews() {
@@ -86,8 +84,6 @@ export default {
   data: () => ({
     allNews: [],
     visible: 6,
-    // loading: true,
-    // errored: false,
   }),
   computed: {
     filteredNews() {

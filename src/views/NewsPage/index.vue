@@ -16,6 +16,7 @@
 import HeaderNews from "../../components/HeaderNews";
 import HomeNews from "../../components/HomeNews";
 import NewsDetails from "./NewsDetails";
+import fetchNews from "../../API/fetchNews";
 
 export default {
   components: {
@@ -23,9 +24,17 @@ export default {
     NewsDetails,
     HomeNews,
   },
-  computed: {
-    news() {
-      return this.$route.params;
+  data: () => ({
+    news: [],
+  }),
+  mounted() {
+    this.getNews();
+  },
+  methods: {
+    async getNews() {
+      const data = await fetchNews(this.$route.href.substr(6));
+      this.news = data.articles[0];
+      console.log("news", this.news.author);
     },
   },
 };

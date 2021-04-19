@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage';
 import NewsPage from '../views/NewsPage';
+import NotFoundPage from '../views/NotFoundPage';
 
 const routes = [
   {
@@ -9,10 +10,25 @@ const routes = [
     component: HomePage,
   },
   {
-    path: '/news/',
+    path: '/news/:title',
     name: 'NewsPage',
     component: NewsPage,
+    props: true,
   },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFoundPage',
+    component: NotFoundPage,
+  },
+  // {
+  //   path: '/404',
+  //   name: 'NotFoundPage',
+  //   component: NotFoundPage,
+  // },
+  // {
+  //   path: '/news/-*',
+  //   redirect: '/404',
+  // },
 ]
 
 const router = createRouter({

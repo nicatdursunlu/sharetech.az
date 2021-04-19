@@ -21,7 +21,6 @@
   &__img {
     margin-bottom: 4rem;
     object-fit: cover;
-    // width: 35rem;
   }
 
   &__content {
@@ -50,6 +49,13 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: $color-orange;
+    margin-bottom: 1rem;
+  }
+
+  &__author {
+    color: indigo;
+    font-size: 1.7rem;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
 

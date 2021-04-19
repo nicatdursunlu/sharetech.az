@@ -1,11 +1,7 @@
 <template>
   <div class="container">
     <div class="news-details">
-      <img
-        :src="news.image_thumbnail_path"
-        :alt="news.name"
-        class="news-details__img"
-      />
+      <img :src="news.urlToImage" :alt="news.title" class="news-details__img" />
       <div class="news-details__content">
         <div class="news-details__social-media">
           <a href="#">
@@ -26,21 +22,17 @@
         </div>
 
         <div class="news-details__info">
-          <p class="news-details__tag">{{ news.status }}</p>
+          <button @click="showTime">Show Time</button>
+          <h4 v-if="news.author == 'null'" class="news-details__tag">
+            No author
+          </h4>
+          <h4 v-else class="news-details__tag">{{ news.author }}</h4>
           <h3 class="news-details__title">{{ news.title }}</h3>
           <div class="flex row">
-            <!-- <div class="news-details__icon">
-              <i class="fas fa-user-edit"></i>
-              &nbsp;{{ news.editTime }} evvel
-            </div> -->
             <div class="news-details__icon">
               <i class="fas fa-clock"></i>
-              &nbsp; Oxunma vaxti {{ news.start_date }}
+              &nbsp; Oxunma vaxti: {{ time }}
             </div>
-            <!-- <div class="news-details__icon">
-              <i class="fas fa-comment-alt"></i>
-              &nbsp; {{ news.comments }} serh
-            </div> -->
           </div>
           <p class="news-details__desc">
             Proin id ultricies justo, fringilla pharetra enim. Phasellus
@@ -51,7 +43,7 @@
             eu. Praesent sit amet enim purus. Sed egestas pretium purus id
             consectetur.
           </p>
-          <p class="news-details__desc">{{ news.desc }}</p>
+          <p class="news-details__desc">{{ news.description }}</p>
           <h1 class="news-details__heading news-details__heading--1">
             Heading 1 - 30px
           </h1>
@@ -70,7 +62,7 @@
           <h6 class="news-details__heading news-details__heading--6">
             Heading 6 - 14px
           </h6>
-          <p class="news-details__desc">{{ news.desc }}</p>
+          <p class="news-details__desc">{{ news.content }}</p>
           <p class="news-details__desc">
             Proin id ultricies justo, fringilla pharetra enim. Phasellus
             vehicula pretium malesuada. Proin dolor enim, suscipit vitae luctus
@@ -87,11 +79,25 @@
 </template>
 
 <script>
+import { format, parseISO } from "date-fns";
+
 export default {
   props: {
     news: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    time() {
+      return this.news.publishedAt
+        ? format(parseISO(this.news.publishedAt), "dd.MM.yyyy")
+        : "";
+    },
+  },
+  methods: {
+    showTime() {
+      console.log("image", this.news);
     },
   },
 };
