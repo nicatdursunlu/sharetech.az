@@ -25,11 +25,8 @@ export default {
     query: "",
   }),
   methods: {
-    getNews() {
-      fetchNews(this.query);
-    },
     emitToParent() {
-      this.$emit("query", this.query);
+      // this.$emit("query", this.query);
       fetchNews(this.query);
       console.log("emit", this.query);
     },

@@ -2,6 +2,7 @@
   <div class="col-4">
     <div class="news-card">
       <router-link :to="{ name: 'NewsPage', params: { title: news.title } }">
+        <!-- :to="{ path: `/airports/${airport.abbreviation}` }" -->
         <div v-if="news.urlToImage === ''">Lodaing...</div>
         <div else>
           <img
@@ -13,19 +14,19 @@
       </router-link>
       <div class="news-card__desc">
         <router-link
-          :to="{ name: 'NewsPage', params: news }"
+          :to="{ name: 'NewsPage', params: { title: news.title } }"
           class="text-decoration"
         >
           <p class="news-card__tag">{{ news.source.name }}</p>
         </router-link>
         <router-link
-          :to="{ name: 'NewsPage', params: news }"
+          :to="{ name: 'NewsPage', params: { title: news.title } }"
           class="text-decoration"
         >
           <h2 class="news-card__author">{{ news.author }}</h2>
         </router-link>
         <router-link
-          :to="{ name: 'NewsPage', params: news }"
+          :to="{ name: 'NewsPage', params: { title: news.title } }"
           class="text-decoration"
         >
           <h3 class="news-card__title">{{ news.title }}</h3>

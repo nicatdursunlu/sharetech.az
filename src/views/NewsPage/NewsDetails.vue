@@ -22,7 +22,6 @@
         </div>
 
         <div class="news-details__info">
-          <button @click="showTime">Show Time</button>
           <h4 v-if="news.author == 'null'" class="news-details__tag">
             No author
           </h4>
@@ -93,11 +92,6 @@ export default {
       return this.news.publishedAt
         ? format(parseISO(this.news.publishedAt), "dd.MM.yyyy")
         : "";
-    },
-  },
-  methods: {
-    showTime() {
-      console.log("image", this.news);
     },
   },
 };

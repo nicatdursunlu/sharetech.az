@@ -36,6 +36,7 @@
 <script>
 import SingleNews from "./SingleNews";
 import fetchNews from "../../API/fetchNews";
+import { nextTick } from "vue";
 
 export default {
   components: {
@@ -45,9 +46,15 @@ export default {
     this.getNews();
   },
   methods: {
+    // get() {
+    //   this.$forceUpdate(function () {
+    //     this.getNews();
+    //   });
+    // },
     async getNews() {
       const data = await fetchNews(this.query);
       this.allNews = data.articles;
+      await nextTick();
     },
     loadMoreBtn() {
       this.visible = this.visible + 6;

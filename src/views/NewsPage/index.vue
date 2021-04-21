@@ -1,7 +1,7 @@
 <template>
   <HeaderNews />
   <div class="divider" />
-  <NewsDetails :news="news" />
+  <NewsDetails :news="news" :title="title" />
   <div class="divider" />
   <div class="container">
     <div class="news">
@@ -25,18 +25,31 @@ export default {
     HomeNews,
   },
   data: () => ({
-    news: [],
+    news: {},
+    title: "",
+    allNews: [],
   }),
   mounted() {
     this.getNews();
   },
   methods: {
     async getNews() {
-      const data = await fetchNews(this.$route.href.substr(6));
+      this.title = this.$route.params.title;
+      const data = await fetchNews(this.title);
       this.news = data.articles[0];
-      console.log("news", this.news.author);
+      // const data = await fetchNews();
+      // this.allNews = data.articles;
     },
   },
+  // computed: {
+  //   news() {
+  //     this.title = this.$route.params.title;
+  //     return this.allNews.filter((news) =>
+  //       news.title.localeCompare(this.title)
+  //     );
+  //   },
+  // },
+  onMounted() {},
 };
 </script>
 
