@@ -32,24 +32,16 @@ export default {
   mounted() {
     this.getNews();
   },
+  watch: {
+    "$route.path": "getNews",
+  },
   methods: {
     async getNews() {
       this.title = this.$route.params.title;
       const data = await fetchNews(this.title);
       this.news = data.articles[0];
-      // const data = await fetchNews();
-      // this.allNews = data.articles;
     },
   },
-  // computed: {
-  //   news() {
-  //     this.title = this.$route.params.title;
-  //     return this.allNews.filter((news) =>
-  //       news.title.localeCompare(this.title)
-  //     );
-  //   },
-  // },
-  onMounted() {},
 };
 </script>
 

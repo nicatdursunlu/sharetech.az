@@ -2,7 +2,6 @@
   <div class="col-4">
     <div class="news-card">
       <router-link :to="{ name: 'NewsPage', params: { title: news.title } }">
-        <!-- :to="{ path: `/airports/${airport.abbreviation}` }" -->
         <div v-if="news.urlToImage === ''">Lodaing...</div>
         <div else>
           <img
@@ -43,13 +42,15 @@
 </template>
 
 <script>
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 export default {
   props: ["news"],
   computed: {
     time() {
-      return format(new Date(this.news.publishedAt), "dd.MM.yyyy");
+      return this.news.publishedAt
+        ? format(parseISO(this.news.publishedAt), "dd.MM.yyyy")
+        : "";
     },
   },
 };

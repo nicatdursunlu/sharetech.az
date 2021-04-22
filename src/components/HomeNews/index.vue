@@ -17,6 +17,7 @@
       </div>
     </div> -->
 
+    <button @click="queryClick">Query</button>
     <div class="row" v-if="allNews.length">
       <SingleNews
         v-for="news in allNews.slice(0, visible)"
@@ -36,56 +37,11 @@
 <script>
 import SingleNews from "./SingleNews";
 import fetchNews from "../../API/fetchNews";
-import { nextTick } from "vue";
+// import { nextTick } from "vue";
 
 export default {
   components: {
     SingleNews,
-  },
-  created() {
-    this.getNews();
-  },
-  methods: {
-    // get() {
-    //   this.$forceUpdate(function () {
-    //     this.getNews();
-    //   });
-    // },
-    async getNews() {
-      const data = await fetchNews(this.query);
-      this.allNews = data.articles;
-      await nextTick();
-    },
-    loadMoreBtn() {
-      this.visible = this.visible + 6;
-    },
-    async queryClick() {
-      const data = await fetchNews("");
-      console.log("fetchNews", data.articles);
-    },
-    // fetchNews() {
-    //   // const apiKey = "19a55dd2e1794c1b95df5fa8420418e8";
-    //   const apiKey = "fba9f5931dd5400080368938a8ec863f";
-    //   const url =
-    //     "https://newsapi.org/v2/top-headlines?" +
-    //     "country=tr&" +
-    //     `apiKey=${apiKey}` +
-    //     `&q=${this.query}`;
-
-    //   console.log("url", this.query);
-
-    //   fetch(url)
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       console.log("data", data.articles);
-    //       this.allNews = data.articles;
-    //     })
-    //     .catch((error) => {
-    //       console.log("error", error);
-    //       this.errored = true;
-    //     })
-    //     .finally(() => (this.loading = false));
-    // },
   },
   props: ["query", "searchState"],
   data: () => ({
@@ -100,6 +56,23 @@ export default {
           news.source.name.toLowerCase().match(this.query.toLowerCase())
         );
       });
+    },
+  },
+  created() {
+    this.getNews();
+  },
+  methods: {
+    async getNews() {
+      const data = await fetchNews();
+      this.allNews = data.articles;
+    },
+    loadMoreBtn() {
+      this.visible = this.visible + 6;
+    },
+    async queryClick() {
+      const data = await fetchNews("");
+      console.log("fetchNews", data.articles);
+      console.log("query", this.query);
     },
   },
 };
