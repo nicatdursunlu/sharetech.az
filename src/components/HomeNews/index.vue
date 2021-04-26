@@ -1,10 +1,19 @@
 <template>
   <div class="news">
-    <h1 v-if="allNews.length && searchState" class="news__heading">
+    <h1 v-if="newsLength && searchState" class="news__heading">
       <span class="news__heading-span">“Share tech” </span>ile bagli neticeler
     </h1>
 
-    <!-- <div v-else class="news__error-box">
+    <!-- <button @click="queryClick">Query</button> -->
+    <div v-if="newsLength" class="row">
+      <SingleNews
+        v-for="news in allNews.slice(0, visible)"
+        :key="news.title"
+        :news="news"
+      />
+    </div>
+
+    <div v-else class="news__error-box">
       <h1 class="news__exclamation">!</h1>
       <div class="news__error-content">
         <h1 class="news__error-message news__error-message--orange">
@@ -14,18 +23,9 @@
           Axtarışınız ilə bağlı heç bir nəticə tapılmadı!
         </h1>
       </div>
-    </div> -->
-
-    <!-- <button @click="queryClick">Query</button> -->
-    <div class="row" v-if="allNews.length">
-      <SingleNews
-        v-for="news in allNews.slice(0, visible)"
-        :key="news.title"
-        :news="news"
-      />
     </div>
 
-    <div v-if="visible < allNews.length" class="news__btn-box">
+    <div v-if="visible < newsLength" class="news__btn-box">
       <button @click="loadMoreBtn" to="#" class="news__btn-box-button">
         Diger xeberler
       </button>
@@ -44,8 +44,9 @@ export default {
   props: ["query", "searchState"],
   data: () => ({
     allNews: [],
-    visible: 6,
-    resultNews: [],
+    visible: 10,
+    loading: true,
+    errored: false,
   }),
   computed: {
     filteredNews() {
@@ -60,6 +61,9 @@ export default {
   created() {
     this.getNews();
   },
+  updated() {
+    console.log("allNews", this.allNews);
+  },
   watch: {
     query: {
       handler() {
@@ -73,7 +77,12 @@ export default {
       this.allNews = data.articles;
     },
     loadMoreBtn() {
-      this.visible = this.visible + 6;
+      this.visible = this.visible + 10;
+    },
+  },
+  computed: {
+    newsLength() {
+      return this.allNews.length;
     },
   },
 };

@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <SingleHeaderNews
+        v-for="news in allNews.slice(allNews.length - 4, allNews.lebgth)"
         :news="news"
-        v-for="news in allNews.slice(0, 4)"
         :key="news.id"
       />
     </div>

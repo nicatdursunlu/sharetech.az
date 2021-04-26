@@ -3,8 +3,9 @@ export default async function fetchNews(query) {
   const apiKey = "fba9f5931dd5400080368938a8ec863f";
   const url =
     "https://newsapi.org/v2/top-headlines?" +
-    "country=tr&" +
-    `apiKey=${apiKey}${query ? '&q=' + query : ''}`;
+    "country=us&" +
+    `apiKey=${apiKey}${query ? '&q=' + query : ''}` +
+    `&pageSize=100` + `&page=1`;
 
   console.log("url", url);
 

@@ -2,6 +2,8 @@
 @import "../../assets/styles/mixins";
 
 .news {
+  min-height: 55vh;
+
   &__heading {
     font-size: 2rem;
     text-align: center;
@@ -106,6 +108,7 @@
   &__img {
     width: 100%;
     border-radius: 5px;
+    height: auto;
   }
 
   &__tag {
@@ -121,6 +124,8 @@
     font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 1rem;
+
+    @include lineClamp;
   }
 
   &__title {
