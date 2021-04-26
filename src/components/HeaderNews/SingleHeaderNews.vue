@@ -1,9 +1,12 @@
 <template>
-  <router-link to="#" class="content col-3">
-    <img :src="news.img" :alt="news.title" class="image" />
+  <router-link
+    :to="{ name: 'NewsPage', params: { title: news.title } }"
+    class="content col-3"
+  >
+    <img :src="news.urlToImage" :alt="news.title" class="image" />
     <div class="details">
       <h4 class="title">{{ news.title }}</h4>
-      <p class="desc">{{ news.desc }}</p>
+      <p class="desc">{{ news.description }}</p>
     </div>
   </router-link>
 </template>
@@ -11,6 +14,11 @@
 <script>
 export default {
   props: ["news"],
+  computed: {
+    filteredTitle() {
+      return this.news.title;
+    },
+  },
 };
 </script>
 

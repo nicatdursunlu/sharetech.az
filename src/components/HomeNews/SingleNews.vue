@@ -12,12 +12,9 @@
         </div>
       </router-link>
       <div class="news-card__desc">
-        <router-link
-          :to="{ name: 'NewsPage', params: { title: news.title } }"
-          class="text-decoration"
-        >
+        <a :href="news.url" target="_blank" class="text-decoration">
           <p class="news-card__tag">{{ news.source.name }}</p>
-        </router-link>
+        </a>
         <router-link
           :to="{ name: 'NewsPage', params: { title: news.title } }"
           class="text-decoration"

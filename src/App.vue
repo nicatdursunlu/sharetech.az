@@ -1,6 +1,6 @@
 <template>
   <Header v-if="!searchState" :toggleSearch="toggleSearch" />
-  <SearchBar @query="getQuery" v-else :toggleSearch="toggleSearch" />
+  <SearchBar v-else @query="getQuery" :toggleSearch="toggleSearch" />
   <router-view :query="query" :searchState="searchState" />
   <Footer />
 </template>

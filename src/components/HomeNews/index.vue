@@ -1,7 +1,6 @@
 <template>
   <div class="news">
-    <!-- <button @click="queryClick">CLG</button> -->
-    <h1 v-if="allNews.length" class="news__heading">
+    <h1 v-if="allNews.length && searchState" class="news__heading">
       <span class="news__heading-span">“Share tech” </span>ile bagli neticeler
     </h1>
 
@@ -17,7 +16,7 @@
       </div>
     </div> -->
 
-    <button @click="queryClick">Query</button>
+    <!-- <button @click="queryClick">Query</button> -->
     <div class="row" v-if="allNews.length">
       <SingleNews
         v-for="news in allNews.slice(0, visible)"
@@ -37,7 +36,6 @@
 <script>
 import SingleNews from "./SingleNews";
 import fetchNews from "../../API/fetchNews";
-// import { nextTick } from "vue";
 
 export default {
   components: {
@@ -47,6 +45,7 @@ export default {
   data: () => ({
     allNews: [],
     visible: 6,
+    resultNews: [],
   }),
   computed: {
     filteredNews() {
@@ -61,18 +60,20 @@ export default {
   created() {
     this.getNews();
   },
+  watch: {
+    query: {
+      handler() {
+        this.getNews();
+      },
+    },
+  },
   methods: {
     async getNews() {
-      const data = await fetchNews();
+      const data = await fetchNews(this.query);
       this.allNews = data.articles;
     },
     loadMoreBtn() {
       this.visible = this.visible + 6;
-    },
-    async queryClick() {
-      const data = await fetchNews("");
-      console.log("fetchNews", data.articles);
-      console.log("query", this.query);
     },
   },
 };

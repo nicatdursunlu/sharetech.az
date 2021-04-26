@@ -20,15 +20,15 @@ const routes = [
     name: 'NotFoundPage',
     component: NotFoundPage,
   },
-  // {
-  //   path: '/404',
-  //   name: 'NotFoundPage',
-  //   component: NotFoundPage,
-  // },
-  // {
-  //   path: '/news/-*',
-  //   redirect: '/404',
-  // },
+  {
+    path: '/404',
+    name: 'NotFoundPage',
+    component: NotFoundPage,
+  },
+  {
+    path: '/news/-*',
+    redirect: { name: 'NotFoundPage' },
+  },
 ]
 
 const router = createRouter({

@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import HeaderNews from "../../components/HeaderNews";
 import MainNews from "../../components/MainNews";
-import Advertising from "../../components/Advertising";
 import HomeNews from "../../components/HomeNews";
+import HeaderNews from "../../components/HeaderNews";
+import Advertising from "../../components/Advertising";
 
 export default {
   name: "Home",
