@@ -1,14 +1,16 @@
 <template>
-  <router-link
-    :to="{ name: 'NewsPage', params: { title: news.title } }"
-    class="content col-3"
-  >
-    <img :src="news.urlToImage" :alt="news.title" class="image" />
-    <div class="details">
-      <h4 class="title">{{ news.title }}</h4>
-      <p class="desc">{{ news.description }}</p>
-    </div>
-  </router-link>
+  <div class="col-3">
+    <router-link
+      :to="{ name: 'NewsPage', params: { title: news.title } }"
+      class="content"
+    >
+      <img :src="news.urlToImage" :alt="news.title" class="image" />
+      <div class="details">
+        <h4 class="title">{{ news.title }}</h4>
+        <p class="desc">{{ news.description }}</p>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
