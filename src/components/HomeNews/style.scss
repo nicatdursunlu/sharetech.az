@@ -4,57 +4,12 @@
 .news {
   min-height: 58vh;
 
-  &__heading {
-    font-size: 2rem;
-    text-align: center;
-    margin: 4rem 0;
-    color: $color-grey-dark;
-
-    &-span {
-      color: $color-orange;
-    }
-  }
-
   &__title {
     text-align: center;
     text-transform: uppercase;
     font-size: 2.5rem;
     color: $color-grey-dark;
     margin: 4rem 0;
-  }
-
-  &__error-box {
-    background-color: #fafafa;
-    border-radius: 8px;
-    margin: 4rem 0;
-    padding: 2rem 6rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  &__exclamation {
-    font-weight: 700;
-    font-size: 10rem;
-    margin-right: 6rem;
-  }
-
-  &__error-content {
-    border-left: 3px solid $color-orange;
-    height: 10rem;
-    padding-left: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  &__error-message {
-    font-size: 2rem;
-
-    &--orange {
-      color: $color-orange;
-      margin-bottom: 2rem;
-    }
   }
 
   &__loading {

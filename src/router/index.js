@@ -17,6 +17,12 @@ const routes = [
     props: true,
   },
   {
+    path: '/search',
+    name: 'SearchPage',
+    component: SearchPage,
+    props: true,
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'NotFoundPage',
     component: NotFoundPage,

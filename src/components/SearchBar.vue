@@ -9,7 +9,7 @@
         @keyup="emitToParent"
         @keyup.enter="toggleSearch"
       />
-      <button @click="toggleSearch" class="search-bar__button">
+      <button @click="closeSearch" class="search-bar__button">
         <i class="fas fa-times"></i>
       </button>
     </div>
@@ -27,10 +27,11 @@ export default {
   }),
   methods: {
     emitToParent() {
-      // this.$emit("query", this.query);
-      // fetchNews(this.query);
       this.emitter.emit("query", this.query);
-      // console.log("emit", this.query);
+    },
+    closeSearch() {
+      this.toggleSearch();
+      this.$router.push("/");
     },
   },
 };

@@ -4,7 +4,7 @@
       <a href="#" class="header__logo">
         <img src="../assets/images/logo.png" alt="logo" class="header__img" />
       </a>
-      <button @click="toggleSearch" class="header__search">
+      <button @click="openSearch" class="header__search">
         <i class="fas fa-search icon"></i>
       </button>
     </div>
@@ -15,6 +15,12 @@
 <script>
 export default {
   props: ["toggleSearch"],
+  methods: {
+    openSearch() {
+      this.toggleSearch();
+      this.$router.push("/search");
+    },
+  },
 };
 </script>
 
