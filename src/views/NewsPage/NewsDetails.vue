@@ -22,10 +22,16 @@
         </div>
 
         <div class="news-details__info">
-          <h4 v-if="news.author == 'null'" class="news-details__tag">
+          <!-- <h4 v-if="news.source.name == 'null'" class="news-details__tag">
+            No referance
+          </h4>
+          <a v-else :href="news.url" target="_blank" class="text-decoration">
+            <h4 class="news-details__tag">{{ news.source.name }}//</h4>
+          </a> -->
+          <h4 v-if="news.author == null" class="news-details__author">
             No author
           </h4>
-          <h4 v-else class="news-details__tag">{{ news.author }}</h4>
+          <h4 v-else class="news-details__author">{{ news.author }}</h4>
           <h3 class="news-details__title">{{ news.title }}</h3>
           <div class="flex row">
             <div class="news-details__icon">
@@ -93,6 +99,10 @@ export default {
         ? format(parseISO(this.news.publishedAt), "dd.MM.yyyy")
         : "";
     },
+  },
+  updated() {
+    console.log("source", this.news.source);
+    // console.log("name", this.news.source.name);
   },
 };
 </script>

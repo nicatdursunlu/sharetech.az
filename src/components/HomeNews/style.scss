@@ -2,7 +2,7 @@
 @import "../../assets/styles/mixins";
 
 .news {
-  min-height: 55vh;
+  min-height: 58vh;
 
   &__heading {
     font-size: 2rem;
@@ -57,6 +57,14 @@
     }
   }
 
+  &__loading {
+    &-message {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
   &__btn-box {
     margin: 5rem 0;
     display: flex;
@@ -108,7 +116,7 @@
   &__img {
     width: 100%;
     border-radius: 5px;
-    height: auto;
+    height: 20rem;
   }
 
   &__tag {

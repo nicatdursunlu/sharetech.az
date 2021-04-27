@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage';
 import NewsPage from '../views/NewsPage';
+import SearchPage from '../views/SearchPage';
 import NotFoundPage from '../views/NotFoundPage';
 
 const routes = [

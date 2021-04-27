@@ -3,7 +3,7 @@
     <div class="news-card">
       <router-link :to="{ name: 'NewsPage', params: { title: news.title } }">
         <div v-if="news.urlToImage === null">Lodaing...</div>
-        <div else>
+        <div v-else>
           <img
             :src="news.urlToImage"
             :alt="news.source.name"

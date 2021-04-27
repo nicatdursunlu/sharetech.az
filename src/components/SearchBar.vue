@@ -7,6 +7,7 @@
         class="search-bar__input"
         placeholder="Axtarmaq istədiyiniz sözü daxil edin ..."
         @keyup="emitToParent"
+        @keyup.enter="toggleSearch"
       />
       <button @click="toggleSearch" class="search-bar__button">
         <i class="fas fa-times"></i>
@@ -26,9 +27,10 @@ export default {
   }),
   methods: {
     emitToParent() {
-      this.$emit("query", this.query);
-      fetchNews(this.query);
-      console.log("emit", this.query);
+      // this.$emit("query", this.query);
+      // fetchNews(this.query);
+      this.emitter.emit("query", this.query);
+      // console.log("emit", this.query);
     },
   },
 };

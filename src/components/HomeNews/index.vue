@@ -4,7 +4,6 @@
       <span class="news__heading-span">“Share tech” </span>ile bagli neticeler
     </h1>
 
-    <!-- <button @click="queryClick">Query</button> -->
     <div v-if="newsLength" class="row">
       <SingleNews
         v-for="news in allNews.slice(0, visible)"
@@ -13,7 +12,7 @@
       />
     </div>
 
-    <div v-else class="news__error-box">
+    <div v-else-if="!newsLength && searchState" class="news__error-box">
       <h1 class="news__exclamation">!</h1>
       <div class="news__error-content">
         <h1 class="news__error-message news__error-message--orange">
@@ -23,6 +22,10 @@
           Axtarışınız ilə bağlı heç bir nəticə tapılmadı!
         </h1>
       </div>
+    </div>
+
+    <div v-else class="news__loading-box">
+      <h1 class="news__loading-message">Loading...</h1>
     </div>
 
     <div v-if="visible < newsLength" class="news__btn-box">
