@@ -4,7 +4,7 @@
     <div class="divider"></div>
     <div class="container">
       <div class="search__content">
-        <h1 v-if="newsLength" class="search__heading">
+        <h1 v-if="newsLength && searchState" class="search__heading">
           <span class="search__heading-span">“Share tech” </span>ile bagli
           neticeler
         </h1>
@@ -20,7 +20,10 @@
             </h1>
           </div>
         </div>
-        <HomeNews />
+        
+        <template v-if="searchState">
+          <HomeNews :allNews="allNews" />
+        </template>
       </div>
     </div>
   </div>
@@ -47,7 +50,7 @@ export default {
     this.getNews();
   },
   updated() {
-    console.log("allNews", this.allNews);
+    console.log("allNews search", this.allNews);
   },
   watch: {
     query: {

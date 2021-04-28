@@ -5,7 +5,7 @@ export default async function fetchNews(query) {
     "https://newsapi.org/v2/top-headlines?" +
     "country=tr&" +
     `apiKey=${apiKey}${query ? '&q=' + query : ''}` +
-    `&pageSize=100` + `&page=1`;
+    `&pageSize=100`;
 
   console.log("url", url);
 
