@@ -18,8 +18,6 @@
 </template>
 
 <script>
-import fetchNews from "../API/fetchNews";
-
 export default {
   props: ["toggleSearch"],
   data: () => ({

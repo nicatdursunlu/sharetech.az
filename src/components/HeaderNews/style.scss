@@ -17,6 +17,14 @@
   }
 }
 
+.loading {
+  &-message {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
 .image {
   margin-right: 1.5rem;
   width: 40%;

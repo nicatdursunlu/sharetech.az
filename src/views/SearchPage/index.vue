@@ -20,8 +20,8 @@
             </h1>
           </div>
         </div>
-        
-        <template v-if="searchState">
+
+        <template>
           <HomeNews :allNews="allNews" />
         </template>
       </div>

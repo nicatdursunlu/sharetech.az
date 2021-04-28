@@ -1,11 +1,14 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div v-if="newsLength" class="row">
       <SingleHeaderNews
-        v-for="news in allNews.slice(allNews.length - 4, allNews.lebgth)"
+        v-for="news in allNews.slice(newsLength - 4, newsLength)"
         :news="news"
         :key="news.id"
       />
+    </div>
+    <div v-else-if="!newsLength" class="loading">
+      <h1 class="loading-message">Loading...</h1>
     </div>
   </div>
 </template>
@@ -29,6 +32,11 @@ export default {
     async getNews() {
       const data = await fetchNews(this.query);
       this.allNews = data.articles;
+    },
+  },
+  computed: {
+    newsLength() {
+      return this.allNews.length;
     },
   },
 };
