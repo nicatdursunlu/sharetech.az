@@ -4,7 +4,7 @@
     <div class="divider"></div>
     <div class="container">
       <div class="search__content">
-        <h1 v-if="newsLength && searchState" class="search__heading">
+        <h1 v-if="newsLength" class="search__heading">
           <span class="search__heading-span">“Share tech” </span>ile bagli
           neticeler
         </h1>
@@ -21,9 +21,7 @@
           </div>
         </div>
 
-        <template>
-          <HomeNews :allNews="allNews" />
-        </template>
+        <HomeNews :allNews="allNews" />
       </div>
     </div>
   </div>

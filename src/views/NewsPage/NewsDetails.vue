@@ -100,10 +100,6 @@ export default {
         : "";
     },
   },
-  updated() {
-    console.log("source", this.news.source);
-    // console.log("name", this.news.source.name);
-  },
 };
 </script>
 

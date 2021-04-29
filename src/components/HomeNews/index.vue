@@ -8,10 +8,6 @@
       />
     </div>
 
-    <div v-else-if="!newsLength && !searchState" class="news__loading-box">
-      <h1 class="news__loading-message">Loading...</h1>
-    </div>
-
     <div v-if="visible < newsLength" class="news__btn-box">
       <button @click="loadMoreBtn" class="news__btn-box-button">
         Diger xeberler

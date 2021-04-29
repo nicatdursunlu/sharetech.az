@@ -7,7 +7,7 @@
     <div class="news">
       <h3 class="news__title"></h3>
       <h3 class="news__title">Oxşar xəbərlər</h3>
-      <HomeNews />
+      <HomeNews :allNews="allNews" />
     </div>
   </div>
 </template>
@@ -32,6 +32,9 @@ export default {
   mounted() {
     this.getNews();
   },
+  updated() {
+    console.log("all", this.allNews);
+  },
   watch: {
     "$route.path": "getNews",
   },
@@ -39,6 +42,8 @@ export default {
     async getNews() {
       this.title = this.$route.params.title;
       const data = await fetchNews(this.title);
+      this.allNews = await fetchNews();
+      this.allNews = this.allNews.articles;
       this.news = data.articles[0];
     },
   },

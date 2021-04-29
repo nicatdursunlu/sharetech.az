@@ -1,9 +1,9 @@
 <template>
   <div class="header container">
     <div class="flex">
-      <a href="#" class="header__logo">
+      <router-link to="/" class="header__logo">
         <img src="../assets/images/logo.png" alt="logo" class="header__img" />
-      </a>
+      </router-link>
       <button @click="openSearch" class="header__search">
         <i class="fas fa-search icon"></i>
       </button>

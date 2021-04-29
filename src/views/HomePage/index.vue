@@ -7,6 +7,9 @@
         <MainNews />
         <Advertising />
       </div>
+      <div v-if="!allNews.length" class="home__loading-box">
+        <h1 class="home__loading-message">Loading...</h1>
+      </div>
       <HomeNews
         :visible="visible"
         :query="query"
@@ -41,19 +44,9 @@ export default {
   created() {
     this.getNews();
   },
-  updated() {
-    console.log("homepage", this.allNews);
-  },
-  watch: {
-    query: {
-      handler() {
-        this.getNews();
-      },
-    },
-  },
   methods: {
     async getNews() {
-      const data = await fetchNews(this.query);
+      const data = await fetchNews();
       this.allNews = data.articles;
     },
   },
